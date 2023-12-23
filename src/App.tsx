@@ -1,34 +1,26 @@
 import { useState } from "react";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import reactLogo from "./assets/react.svg";
+import { Button } from "@/components/ui/button";
 
 function App() {
 	const [count, setCount] = useState(0);
 
 	return (
-		<>
-			<div>
-				<a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank" rel="noreferrer">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
+		<div>
+			<div className="h-screen w-screen flex flex-col justify-center items-center gap-8">
+				<h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+					Vite + shadcn/ui
+				</h1>
+				<div className="flex flex-col gap-2">
+					<Button onClick={() => setCount((count) => count + 1)}>
+						{" "}
+						count is {count}
+					</Button>
+					<p className="leading-7">
+						Edit <code>src/App.tsx</code> and save to test HMR
+					</p>
+				</div>
 			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button type="button" onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
-		</>
+		</div>
 	);
 }
 
