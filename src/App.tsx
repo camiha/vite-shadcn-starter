@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -18,6 +19,9 @@ function App() {
 					<p className="leading-7">
 						Edit <code>src/App.tsx</code> and save to test HMR
 					</p>
+				</div>
+				<div className="fixed top-8 right-8">
+					<ModeToggle />
 				</div>
 			</div>
 		</div>
